@@ -1,5 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
-	background: url(../../assets/images/grid-image.jpg);// Only for test purpouses
-	min-height: 100%;
-	height: 100%;
+  font-size: $fontSize;
+  font-family: Roboto, Arial, sans-serif;
+  color: #202020;
+  @include min-height;
+}
+
+body {
+  @include min-height;
+}
+
+body, h1, h2, h3, h4, h5, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+.row {
+  margin: 0;
 }
