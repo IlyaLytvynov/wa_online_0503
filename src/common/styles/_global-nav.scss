@@ -1,0 +1,40 @@
+$list: entertainments applications movies;
+.global-nav {
+  box-shadow: $sidebarBoxShadow;
+  &__burger {
+    display: none;
+  }
+  &__nav-menu {
+
+  }
+  .nav-link {
+    display: flex;
+    height: $globalNavLinkHeight;
+    border: 1px solid red;
+    @each $item in $list {
+      &_#{$item} {
+        :hover {
+          background: map-get($navbarColors, $item)
+        }
+        .nav-link {
+          &__icon {
+            background: map-get($navbarColors, $item);
+          }
+        }
+      }
+    }
+    &__icon {
+      flex: 0 0 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $globalNavLinkColor;
+    }
+    &__title {
+      flex: 0 0 70%;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+    }
+  }
+}
