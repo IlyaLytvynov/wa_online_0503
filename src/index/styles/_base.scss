@@ -1,0 +1,11 @@
+$not-valid-color: red;
+.name-row {
+  &.not-valid {
+    span {
+      color: $not-valid-color;
+    }
+    input {
+      border: 1px solid $not-valid-color;
+    }
+  }
+}
