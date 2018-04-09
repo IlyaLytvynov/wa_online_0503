@@ -1,0 +1,31 @@
+.lamp {
+  width: 60px;
+  &_toggle {
+    &:nth-child(odd) {
+      .lamp__lighter {
+        background: #008dff;
+      }
+    }
+    &:nth-child(even) {
+      .lamp__lighter {
+        background: #deff00;
+      }
+    }
+    .lamp__switcher {
+      background: #4dd800;
+      color: #FFF
+    }
+  }
+  &__lighter {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 50%;
+  }
+  &__switcher {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+}
