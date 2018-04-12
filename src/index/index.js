@@ -1,4 +1,2 @@
-import './scripts/test.js';
-import './scripts/functions.js';
-import './scripts/lamps.js';
+import './scripts/dropdown.js';
 import './index.scss';
