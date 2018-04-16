@@ -11,7 +11,7 @@ const baseConf = (_path) => {
     const entry = {
         index: ['./src/index/index.js'],
         about: ['./src/about/about.js'],
-        'homework-10': ['./src/homework-10/homework-10.js']
+        'lesson-12': ['./src/lesson-12/lesson-12.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

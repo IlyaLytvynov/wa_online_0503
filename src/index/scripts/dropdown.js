@@ -111,3 +111,8 @@ dropdown(document.querySelector('#countriesDropdownMenu'), countries);
  * 2. Создание функции которая реализовывает алгоритм открытия закрытия акоордеона
  * 3. Реализация динамического создания элемента.
  * */
+
+
+const div = document.createElement('div');
+div.classList.add('btn');
+rootelemnent.appendChild(div);
