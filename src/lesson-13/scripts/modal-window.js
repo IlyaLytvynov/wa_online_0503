@@ -18,6 +18,7 @@ class ModalWindow {
     this.targetElement = targetElement;
     // this.hide = this.hide.bind(this);
     this.init();
+    this.subscribtions = [];
   }
 
   render() {
@@ -67,21 +68,12 @@ class ModalWindow {
 
     if (options.withButtons) {
       modalFooter.classList.add('modal__footer_visible');
-      const btnConfirm = this.content.querySelector('.modal__btn_confirm');
-      const confirmCb = function (e) {
-        options.onConfirm();
-        btnConfirm.removeEventListener(e.type, confirmCb);
-      };
 
-      btnConfirm.addEventListener('click', confirmCb);
+      const btnConfirm = this.content.querySelector('.modal__btn_confirm');
+      btnConfirm.onclick = options.onConfirm();
 
       const btnClose = this.content.querySelector('.modal__btn_close');
-      const cancelCb = function (e) {
-        options.onCancel();
-        btnClose.removeEventListener(e.type, cancelCb);
-      };
-
-      btnClose.addEventListener('click', cancelCb);
+      btnClose.onclick =  options.onCancel();
     }
 
     modalBodyEl.innerHTML = options.content;
@@ -91,6 +83,7 @@ class ModalWindow {
 
   hide() {
     this.targetElement.classList.remove(ACTIVE_CLASS_NAME);
+    this.subscribtions.forEach((unsubscribe) => unsubscribe());
   }
 
 }
