@@ -1,3 +1,5 @@
+@import './variables';
+
 $mobile: 767.98px;
 $tablet: 991.98px;
 $laptop: 1200px;
@@ -12,6 +14,11 @@ $laptop: 1200px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@mixin page-content {
+  max-width: $page-width;
+  margin: 0 auto;
 }
 
 @mixin mobile {

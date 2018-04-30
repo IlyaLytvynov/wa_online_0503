@@ -1,0 +1,10 @@
+@import '../../common/styles/core';
+
+.app {
+  border: 1px solid green;
+  &__header {
+    &.app__header_active {
+      background-color: red;
+    }
+  }
+}

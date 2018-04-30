@@ -1,0 +1,12 @@
+@import '../../../../common/styles/core';
+
+.header {
+  background: #515151;
+  color: #FFF;
+  &__content {
+    @include page-content;
+  }
+  &_active {
+    background: red;
+  }
+}

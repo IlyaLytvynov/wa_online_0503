@@ -1,0 +1,7 @@
+@import '../../../../common/styles/core';
+
+.app-content {
+  &__content {
+    @include page-content;
+  }
+}

@@ -12,7 +12,6 @@ export class DropDown {
 
   toggle(e) {
     e && e.stopPropagation();
-
     if (this.isOpened) {
       this.close();
       this.setTitle((e && e.target.textContent) || this.titleEl.textContent);
