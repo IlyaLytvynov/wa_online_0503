@@ -1,0 +1,21 @@
+.task-list-item {
+  &__title {
+    display: inline-block;
+  }
+  &__form {
+    display: none;
+  }
+  &_edit {
+    .task-list-item__form {
+      display: inherit;
+    }
+    .task-list-item__title {
+      display: none;
+    }
+  }
+  &_completed {
+    .task-list-item__title {
+      text-decoration: line-through;
+    }
+  }
+}
